@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JAVA_places.iml" filepath="$PROJECT_DIR$/JAVA_places.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb/JavaWeb.iml" filepath="$PROJECT_DIR$/JavaWeb/JavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JucMaven/JucMaven.iml" filepath="$PROJECT_DIR$/JucMaven/JucMaven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java基础/Module01.iml" filepath="$PROJECT_DIR$/Java基础/Module01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/线程基础学习/Module02.iml" filepath="$PROJECT_DIR$/线程基础学习/Module02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/泛型+File1/Module03.iml" filepath="$PROJECT_DIR$/泛型+File1/Module03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mavendemo/mavendemo.iml" filepath="$PROJECT_DIR$/mavendemo/mavendemo.iml" />
+    </modules>
+  </component>
+</project>

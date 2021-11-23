@@ -1,0 +1,6 @@
+a97
+8.8
+a
+HelloWorld
+true
+我在打印流的目的地中输出
