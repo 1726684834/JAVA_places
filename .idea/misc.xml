@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/MavenWeb01" />
+    <file type="web" url="file://$PROJECT_DIR$/Mybatis01" />
+    <file type="web" url="file://$PROJECT_DIR$/Mybatis02" />
+    <type id="Spring" />
+  </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Desktop/2020GPS/project01" />
     <option name="OTHER_OPTIONS" value="-encoding UTF-8 -charset UTF-8" />
@@ -8,9 +14,18 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/mavendemo/pom.xml" />
         <option value="$PROJECT_DIR$/JucMaven/pom.xml" />
+        <option value="$PROJECT_DIR$/DesignMode/pom.xml" />
+        <option value="$PROJECT_DIR$/MavenWeb02/pom.xml" />
+        <option value="$PROJECT_DIR$/MavenWeb01/pom.xml" />
+        <option value="$PROJECT_DIR$/Mybatis01/pom.xml" />
+        <option value="$PROJECT_DIR$/Mybatis02/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/MavenWeb01/MavenWeb02/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectKey">

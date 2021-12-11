@@ -53,7 +53,6 @@ public class Demo01Singleton {
         Constructor<Demo01Singleton> constructor= Demo01Singleton.class.getDeclaredConstructor (null);
         constructor.setAccessible (true);
         Demo01Singleton instance02=constructor.newInstance ();
-
         flag.set (instance02,false);
         Demo01Singleton instance03=constructor.newInstance ();
         System.out.println(instance02);//com.zhang.class10Single.Demo01Singleton@1540e19d

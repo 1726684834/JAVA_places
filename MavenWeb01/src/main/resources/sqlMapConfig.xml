@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="db.properties"></properties>
+	<settings>
+	<!--缓存的全局开关 默认值true  -->
+	  <setting name="cacheEnabled" value="true"/>
+	  	<!--延迟加载(懒加载)的全局开关 默认值false  -->
+	  <setting name="lazyLoadingEnabled" value="true"/>
+	  <setting name="aggressiveLazyLoading" value="false"/>
+	  	<!--是否允许单一语句返回多结果集 默认true  -->
+	  <setting name="multipleResultSetsEnabled" value="true"/>
+	  	<!--使用列标签代替列名 默认值true  -->
+	  <setting name="useColumnLabel" value="true"/>
+	  	<!--允许JDBC自动生成主键 默认值 false  -->
+	  <setting name="useGeneratedKeys" value="false"/>
+	  	<!--指定MyBatis如何自动映射列到字段或属性 默认值：PARTIAL  -->
+	  <setting name="autoMappingBehavior" value="PARTIAL"/>
+	  	<!--设置默认的执行器 默认值:SIMPLE  -->
+	  <setting name="defaultExecutorType" value="SIMPLE"/>
+	  	<!--设置数据库连接超时时间  -->
+	  <setting name="defaultStatementTimeout" value="25"/>
+		<!--允许在嵌套语句中使用分页 默认值false  -->	  
+	  <setting name="safeRowBoundsEnabled" value="false"/>
+	  	<!--是否开启自动驼峰命名规则映射 默认值false  -->
+	  <setting name="mapUnderscoreToCamelCase" value="false"/>
+	  	<!--缓存一个session中使用的所有查询 默认值：session  -->
+	  <setting name="localCacheScope" value="SESSION"/>
+	  	<!--当没有为参数提供特定的JDBC类型时，为空值指定JDBC类型 默认值：OTHER  -->
+	  <setting name="jdbcTypeForNull" value="OTHER"/>
+	  	<!--指定哪个对象的方法触发一次延迟加载 默认值：equals,clone,hashCode,toString  -->
+	  <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+	</settings>
+	
+	<typeAliases>
+	<package name="ssm.pojo"/>
+	<package name="ssm.vo"/>
+	</typeAliases>
+	
+	<typeHandlers>
+	<typeHandler handler="ssm.typeHandler.MyStringTypeHandler" javaType="String" jdbcType="VARCHAR"/>
+	</typeHandlers>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driver}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.userName}" />
+				<property name="password" value="${jdbc.psw}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<!--关联映射文件  -->
+	<mappers>
+	<package name="ssm.mapper"/>
+	</mappers>
+</configuration>

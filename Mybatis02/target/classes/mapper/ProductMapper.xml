@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zhang.mapper.ProductMapper">
+
+    <!-- 映射器前面是数据库字段名 后面是pojo定义字段名-->
+    <resultMap id="productResultMap" type="zhang.pojo.Product">
+        <id column="id" property="id"/>
+        <result column="pro_code" property="proCode"/>
+        <result column="pro_name" jdbcType="VARCHAR" property="proName" javaType="java.lang.String"/>
+        <result column="pro_num" property="proNum"/>
+        <result column="pro_price" property="proPrice"/>
+    </resultMap>
+    <select id="selectAllProduct" resultMap="productResultMap">
+        select *from product
+    </select>
+    <select id="selectProductByid" resultMap="productResultMap">
+        select *from product
+        <where>
+            id=#{id}
+        </where>
+    </select>
+    <insert id="insertProduct" parameterType="zhang.pojo.Product">
+        insert into product(pro_code,pro_name,pro_num,pro_price) values(#{proCode},#{proName},#{proNum},#{proPrice});
+    </insert>
+    <update id="updateProduct" parameterType="zhang.pojo.Product">
+        update  product
+        <set>
+            pro_code=#{proCode},pro_name=#{proName},pro_num =#{proNum},pro_price=#{proPrice}
+        </set>
+        <where>
+            id=#{id}
+        </where>
+    </update>
+
+    <!--批量插入，查看某条记录是否存在，不存在的话创建一条新记录，存在的话更新某些字段-->
+    <insert id="insertMoreProduct" parameterType="java.util.List" useGeneratedKeys="false"   keyProperty="id" statementType="PREPARED">
+        insert into product
+        (
+        pro_code,
+        pro_name,
+        pro_num,
+        pro_price)
+        values
+        <foreach collection="list" item="item" index="index"  separator=",">
+            (
+            #{item.proCode},
+            #{item.proName},
+            #{item.proNum},
+            #{item.proPrice}
+            )
+        </foreach>
+        ON DUPLICATE KEY UPDATE
+        pro_code = values (pro_code),
+        pro_name = values (pro_name),
+        pro_num = values (pro_num),
+        pro_price = values (pro_price)
+    </insert>
+    <insert id="insertMoreProduct02" parameterType="zhang.pojo.Product" useGeneratedKeys="true" keyProperty="id">
+        insert into ${tableName }(pro_code, pro_name, pro_num, pro_price)
+        values
+        <foreach collection="productList" item="product" separator=",">
+            (
+            #{product.proCode}, #{product.proName}, #{product.proNum}, #{product.proPrice}
+            )
+        </foreach>
+    </insert>
+
+    <!--批量插入返回批量生成的主键id值-->
+    <insert id="insertMoreProduct03" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+        insert into product(pro_code, pro_name, pro_num, pro_price)
+        values
+        <foreach collection="list" item="product" separator=",">
+            (
+            #{product.proCode}, #{product.proName}, #{product.proNum}, #{product.proPrice}
+            )
+        </foreach>
+    </insert>
+
+    <!--<select id="getTDeviceDailyMergeData" resultMap="TDeviceDailyMergeDataResult">
+        select device_id, data_type, create_date, data_value, dtype from ${tableName}
+        <where>
+            device_id = #{deviceId} and dtype = #{dType}
+            and create_date between #{startTime} and #{endTime}
+            and data_type in
+            <foreach collection="dataType" index="index" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </where>
+        order by data_type,create_date
+    </select>-->
+    <!--<update id="updateDeviceDetailInfo">
+        update t_device_detail
+        <set>
+            STATUS = #{status}
+        </set>
+        <where>
+            DEVICE_ID = #{deviceId} and NEED_UPDATE = 1
+        </where>
+        <if test="flag">
+            and DETAIL_ID &lt; 0
+        </if>
+    </update>-->
+
+    <!--select * from user_info where user_name like "%"#{key}"%"-->
+</mapper>
