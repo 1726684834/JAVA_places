@@ -1,0 +1,12 @@
+2021-12-21 22:59:33,731 [main]  INFO UserSpringTest01 - User{id=1, userCode='201701014', userName='张三', userPsw='123456'}
+2021-12-21 22:59:33,733 [main]  INFO UserSpringTest01 - 1
+2021-12-21 23:01:49,128 [main]  INFO UserSpringTest01 - User{id=1, userCode='201701014', userName='张三', userPsw='123456'}
+2021-12-21 23:01:49,129 [main]  INFO UserSpringTest01 - 1
+2021-12-21 23:04:56,239 [main]  INFO UserSpringTest01 - User{id=1, userCode='201701014', userName='张三', userPsw='123456'}
+2021-12-21 23:04:56,240 [main]  INFO UserSpringTest01 - 1
+2021-12-22 21:24:51,260 [main]  INFO UserSpringTest01 - User{id=1, userCode='201701014', userName='张三', userPsw='123456'}
+2021-12-22 21:24:51,261 [main]  INFO UserSpringTest01 - 1
+2021-12-22 21:37:29,049 [main]  INFO SpringTest01 - Monkey [age=23, sex=女, name=fn]
+2021-12-22 22:07:20,534 [main]  INFO UserSpringTest01 - User{id=1, userCode='201701014', userName='张三', userPsw='123456'}
+2021-12-22 22:08:00,931 [main]  INFO UserSpringTest01 - User{id=1, userCode='201701014', userName='张三', userPsw='123456'}
+2021-12-22 22:08:00,933 [main]  INFO UserSpringTest01 - 1
