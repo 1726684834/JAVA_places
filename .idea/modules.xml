@@ -11,8 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/Java基础/Module01.iml" filepath="$PROJECT_DIR$/Java基础/Module01.iml" />
       <module fileurl="file://$PROJECT_DIR$/线程基础学习/Module02.iml" filepath="$PROJECT_DIR$/线程基础学习/Module02.iml" />
       <module fileurl="file://$PROJECT_DIR$/泛型+File1/Module03.iml" filepath="$PROJECT_DIR$/泛型+File1/Module03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mybatis01/Mybatis01.iml" filepath="$PROJECT_DIR$/Mybatis01/Mybatis01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Mybatis02/Mybatis02.iml" filepath="$PROJECT_DIR$/Mybatis02/Mybatis02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring01/Spring01.iml" filepath="$PROJECT_DIR$/Spring01/Spring01.iml" />
     </modules>
   </component>
 </project>

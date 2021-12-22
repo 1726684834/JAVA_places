@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<!--<bean class="zhang.processor.MyBeanPostProcessor"></bean>-->
+
+	<import resource="contextConfigBeanExtends.xml"></import>
+	<!--前后置处理器-->
+	<bean id="helloSpring" class="zhang.pojo.HelloSpring" scope="singleton" init-method="init" destroy-method="close">
+		<property name="message" value="HelloSpring init"></property>
+	</bean>
+
+	<!--属性注入-->
+	<bean id="people" class="zhang.pojo.People" >
+		<property name="code" value="12001"></property>
+		<property name="name" value="张三"></property>
+		<property name="age" value="23"></property>
+		<property name="sex" value="男"></property>
+		<property name="cars" ref="carList"></property>
+		<!--<property name="cars">
+			<list>
+				<ref bean="car1"></ref>
+				<ref bean="car2"></ref>
+			</list>
+		</property>-->
+	</bean>
+	<bean id="car1" class="zhang.pojo.Car">
+		<property name="mark" value="比亚迪DMI"></property>
+		<property name="price" value="150000"></property>
+	</bean>
+	<bean id="car2" class="zhang.pojo.Car">
+		<property name="mark" value="沃尔沃S90"></property>
+		<property name="price" value="400000"></property>
+	</bean>
+	<util:list id="carList">
+		<ref bean="car1"/>
+		<ref bean="car2"/>
+	</util:list>
+
+	<!--依赖注入-->
+	<bean id="people02" class="zhang.pojo.People">
+		<constructor-arg value="12002" index="0" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="李四" index="1" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="女" index="3" ></constructor-arg>
+		<constructor-arg value="23" index="2" ></constructor-arg>
+		<constructor-arg ref="carList" index="4"> </constructor-arg>
+	</bean>
+
+	<!--加载外部属性文件  -->
+<!--
+	<context:property-placeholder location="db.properties"/>
+-->
+	<!--启动Spring AOP的注解支持  -->
+<!--
+	<aop:aspectj-autoproxy/>
+-->
+</beans>

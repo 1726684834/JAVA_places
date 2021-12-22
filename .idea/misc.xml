@@ -4,6 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$/MavenWeb01" />
     <file type="web" url="file://$PROJECT_DIR$/Mybatis01" />
     <file type="web" url="file://$PROJECT_DIR$/Mybatis02" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring01" />
     <type id="Spring" />
   </component>
   <component name="JavadocGenerationManager">
@@ -18,8 +19,8 @@
         <option value="$PROJECT_DIR$/DesignMode/pom.xml" />
         <option value="$PROJECT_DIR$/MavenWeb02/pom.xml" />
         <option value="$PROJECT_DIR$/MavenWeb01/pom.xml" />
-        <option value="$PROJECT_DIR$/Mybatis01/pom.xml" />
         <option value="$PROJECT_DIR$/Mybatis02/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring01/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -30,6 +31,9 @@
   </component>
   <component name="ProjectKey">
     <option name="state" value="project://e2804f05-5315-4fc6-a121-c522a6c26470" />
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://ehcache.org/ehcache.xsd" location="$PROJECT_DIR$" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

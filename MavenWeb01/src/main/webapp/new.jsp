@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>HelloMaven</title>
 </head>
 <body>
-$END$
+<h2>This is new Page</h2>
+<%--username: <%=request.getParameter("username") %><br>
+password: <%=request.getParameter("password") %>--%>
 </body>
 </html>
+

@@ -13,6 +13,7 @@ import java.util.List;
 @Mapper
 public interface ProductMapper {
     List<Product> selectAllProduct();
+    List<Product> selectProductBy(@Param ("proName") List<String> proName,@Param ("proNumStart")int proNumStart,@Param ("proNumEnd")int proNumEnd);
     Product selectProductByid(@Param ("id") int id);
     boolean insertProduct(Product product);
     boolean updateProduct(Product product);

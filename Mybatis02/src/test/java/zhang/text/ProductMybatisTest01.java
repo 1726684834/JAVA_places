@@ -12,7 +12,9 @@ import zhang.pojo.Product;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,6 +35,16 @@ public class ProductMybatisTest01 {
     @Test
     public void selectAllProductTest(){
         List<Product> productList = productMapper.selectAllProduct ();
+        for (Product product : productList){
+            System.out.println (product.toString ());
+        }
+    }
+
+    @Test
+    public void selectProductBy(){
+        List<String> proNameList=Arrays.asList(new String []{"CPU","cpu3.0"});
+        System.out.println(proNameList);
+        List<Product> productList = productMapper.selectProductBy (proNameList,100,105);
         for (Product product : productList){
             System.out.println (product.toString ());
         }

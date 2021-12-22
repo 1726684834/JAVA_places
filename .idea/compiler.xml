@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Spring01" />
         <module name="DesignMode" />
-        <module name="Mybatis01" />
         <module name="JucMaven" />
         <module name="Mybatis02" />
       </profile>
@@ -21,6 +21,7 @@
       <module name="Mybatis01" target="1.8" />
       <module name="Mybatis02" target="1.8" />
       <module name="MybatisLearn01" target="1.5" />
+      <module name="Spring01" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,1 @@
+2021-12-13 23:35:32,887 [main]  INFO UserMybatisTest - User [id=2, userName=李四, userSex=男, userAge=21, userTel=123456, listOrders=[Order [id=2, userId=2, proId=1, orNum=1, totalPrice=3500.0, user=null], Order [id=2, userId=2, proId=2, orNum=2, totalPrice=3000.0, user=null]]]
